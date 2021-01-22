@@ -5,7 +5,6 @@ class CreateTrucks < ActiveRecord::Migration[6.0]
       t.string :description
       t.string :size
       t.integer :price
-      t.string :type
       t.string :make
       t.string :model
       t.string :color

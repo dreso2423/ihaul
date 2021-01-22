@@ -37,7 +37,6 @@ ActiveRecord::Schema.define(version: 2021_01_20_025407) do
     t.string "description"
     t.string "size"
     t.integer "price"
-    t.string "type"
     t.string "make"
     t.string "model"
     t.string "color"

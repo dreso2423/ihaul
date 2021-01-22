@@ -1,2 +1,20 @@
 <h1>Trucks#new</h1>
 <p>Find me in app/views/trucks/new.html.erb</p>
+<h1>Create your truck</h1>
+<p>Find me in app/views/trucks/edit.html.erb</p>
+<%= form_for(@truck) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.label :size %>
+  <%= f.number_field :price %>
+  <%= f.label :price %>
+  <%= f.number_field :make %>
+  <%= f.label :make %>
+  <%= f.number_field :model %>
+  <%= f.label :model %>
+  <%= f.number_field :color %>
+  <%= f.label :color %>
+  <%= f.submit %>
+<% end %>
