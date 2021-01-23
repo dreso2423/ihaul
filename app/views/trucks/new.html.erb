@@ -1,22 +1,20 @@
-<h1>Trucks#new</h1>
-<p>Find me in app/views/trucks/new.html.erb</p>
-<h1>Create your truck</h1>
-<p>Find me in app/views/trucks/edit.html.erb</p>
-<%= form_for(@truck) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-  <%= f.label :size %>
-  <%= f.number_field :price %>
-  <%= f.label :price %>
-  <%= f.text_field :make %>
-  <%= f.label :make %>
-  <%= f.text_field :model %>
-  <%= f.label :model %>
-  <%= f.text_field :color %>
-  <%= f.label :color %>
-  <%= f.submit %>
-<% end %>
 
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6  ">
+      <h2>Please put in the information of your vehicle</h2>
+      <%= simple_form_for @truck do |f| %>
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :size %>
+        <%= f.input :price %>
+        <%= f.input :model %>
+        <%= f.input :make %>
+        <%= f.input :color %>
+        <%= f.button :submit, class: 'btn btn-primary' %>
+      <% end %>
+    </div>
+  </div>
+</div>
 
