@@ -1,35 +1,35 @@
 
-
-
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1>
-      <%=  @truck.size  %>
 
-      </h1>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"> <%= @truck.name %> </h5>
+          <p class="card-text"> <%= @truck.description %> </p>
+          <%= link_to "Go to home", root_path, class: 'btn btn-primary' %>
+        </div>
+      </div>
+
+      <%= simple_form_for([@truck, @booking]) do |f| %>
+      <%= f.input :start_time, as: :date, html5: true  %>
+      <%= f.input :end_time, as: :date, html5: true  %>
+      <%= f.submit %>
+        <% end %>
+
+        <% flash.each do |type, msg| %>
+      <div>
+        <%= msg %>
+      </div>
+      <% end %>
+
+
 
     </div>
   </div>
 </div>
 
-<li class="list-group-item">
-      <%= truck.name %>
-      <%= link_to "Remove",
-                  truck_path(truck),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" } %>
-</li>
 
-
-
-<div class="card" style="width: 18rem;">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
 
 
