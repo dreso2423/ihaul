@@ -3,18 +3,30 @@
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
       <h1>Trucks</h1>
       <ul class="list-group">
-        <% @trucks.each do |truck| %>
-          <li class="list-group-item">
-            <%= link_to truck.name, truck_path(truck) %>
-               <%= link_to "Edit", edit_truck_path(truck)%>
-          </li>
+        <% if not current_user.trucks == nil %>
+              <% @trucks.each do |truck| %>
+                <li class="list-group-item">
+                  <%= link_to truck.name, truck_path(truck) %>
+                     <%= link_to "Edit", edit_truck_path(truck)%>
+                </li>
+            <% end %>
+          <% else %>
+              <% @trucks.each do |truck| %>
+                <li class="list-group-item">
+                  <%= link_to truck.name, truck_path(truck) %>
+                </li>
+          <% end %>
         <% end %>
+
 
       </ul>
       <%= link_to "Add a new Truck", new_truck_path, class: 'btn btn-primary' %>
     </div>
   </div>
 </div>
+
+<%= link_to "Go to home", root_path, class: 'btn btn-primary' %>
+
 
 
 
