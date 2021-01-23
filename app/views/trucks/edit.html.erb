@@ -3,24 +3,17 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-lg-6">
-      <h1>Edit your truck</h1>
-      <%= simple_form_for @truck do |f| %>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
-        <%= f.label :description %>
-        <%= f.text_field :description %>
-        <%= f.label :size %>
-        <%= f.number_field :price %>
-        <%= f.label :price %>
-        <%= f.number_field :make %>
-        <%= f.label :make %>
-        <%= f.number_field :model %>
-        <%= f.label :model %>
-        <%= f.number_field :color %>
-        <%= f.label :color %>
-        <%= f.submit %>
-        <%= f.button :submit, class: 'btn btn-primary' %>
-      <% end %>
+    <h2>Please put in the information of your vehicle</h2>
+    <%= simple_form_for @truck do |f| %>
+      <%= f.input :name %>
+      <%= f.input :description %>
+      <%= f.input :size %>
+      <%= f.input :price %>
+      <%= f.input :model %>
+      <%= f.input :make %>
+      <%= f.input :color %>
+      <%= f.button :submit, class: 'btn btn-primary' %>
+    <% end %>
     </div>
   </div>
 </div>

@@ -9,6 +9,18 @@
 <div class="container" >
   <div class="row">
     <% @trucks.each do |truck| %>
+      <div class="card-trip">
+        <img src="https://source.unsplash.com/250x300/?truck" />
+        <div class="card-trip-infos">
+          <div>
+            <h2><%= truck.name %></h2>
+            <h2><%= truck.price %></h2>
+          </div>
+          <%= link_to "", truck_path(truck), class: 'card-link' %>
+          <h2 class="card-trip-pricing">£99.99</h2>
+          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+        </div>
+      </div>
       <div class="col-12 col-md-6 col-lg-3">
         <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?truck');">
           <div class="card-description">
