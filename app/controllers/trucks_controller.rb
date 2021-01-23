@@ -17,6 +17,7 @@ class TrucksController < ApplicationController
 
   def create
     @truck = Truck.new(truck_params)
+    @truck.owner = current_user
     if @truck.save
       redirect_to truck_path(@truck)
     else
@@ -33,9 +34,17 @@ class TrucksController < ApplicationController
     end
   end
 
+  def destroy
+    @truck = Truck.find(params[:id])
+    @truck.destroy
+    redirect_to truck_path(@truck)
+  end
+
+
+
   private
 
   def truck_params
-    params.require(:truck).permit(:name, :size, :price, :make, :model, :color, :description)
+    params.require(:truck).permit(:name, :description, :size, :price, :make, :model, :color)
   end
 end
