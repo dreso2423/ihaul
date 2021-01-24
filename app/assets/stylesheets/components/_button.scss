@@ -1,0 +1,24 @@
+.get-started-header {
+    font-family: RlBasisGrotesque, Avenir, Helvetica Neue, Helvetica, sans-serif;
+    background: #593CFA;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: normal;
+    font-size: 16px;
+    border: 2px solid #593CFA;
+    /*-moz-transition: all 0.5s ease;*/
+   /* transition: all 0.5s ease;*/
+    width: 132px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.get-started-header:hover {
+    background: #fff;
+    border: 2px solid #593CFA;
+    color: #593CFA;
+    text-decoration: none;
+}
