@@ -1,70 +1,40 @@
-
-
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://www.pexels.com/photo/white-volvo-semi-truck-on-side-of-road-2199293/');">
-  <div class="banner-content">
-    <h1>Trucks</h1>
-    <p>What truck do you want to hire ?</p>
-    <%= link_to "Add a truck", new_truck_path, class: "btn btn-primary btn-lg" %>
-
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
-      <h1>Trucks</h1>
-      <ul class="list-group">
-        <% if not current_user.trucks == nil %>
-              <% @trucks.each do |truck| %>
-                <li class="list-group-item">
-                  <%= link_to truck.name, truck_path(truck) %>
-                     <%= link_to "Edit", edit_truck_path(truck)%>
-                </li>
-            <% end %>
-          <% else %>
-              <% @trucks.each do |truck| %>
-                <li class="list-group-item">
-                  <%= link_to truck.name, truck_path(truck) %>
-                </li>
-          <% end %>
-        <% end %>
-
-
-      </ul>
-      <%= link_to "Add a new Truck", new_truck_path, class: 'btn btn-primary' %>
+<section id="boat_services" class="my-5">
+  <div class="container">
+    <div class="title mb-1">
+      <h2>Please see from our selection of trucks around the world</h2>
+      <p>Browse a new selection of trucks verified for quality & speed</p>
     </div>
-
-  </div>
-</div>
-<div class="container" >
-  <div class="row">
     <% @trucks.each do |truck| %>
-      <div class="card-trip">
-        <img src="https://source.unsplash.com/250x300/?truck" />
-        <div class="card-trip-infos">
-          <div>
-            <h2><%= truck.name %></h2>
-            <h2><%= truck.price %></h2>
-          </div>
-          <%= link_to "", truck_path(truck), class: 'card-link' %>
-          <h2 class="card-trip-pricing">£99.99</h2>
-          <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
-        </div>
+    <div class="row">
+      <div class="col-md-4">
+        <figure>
+      <img src="https://images.pexels.com/photos/5025669/pexels-photo-5025669.jpeg" class="mb-2"alt="">
+      <figcaption class="inside">
+        <h2 class="text-white"><%= truck.name  %></span></h2>
+      </figcaption>
+      <figcaption class="outside">
+        <p class="small text-color mb-0">150+ VERIFIED TRUCKS in Mexico</p>
+        <p class="text-desc">Awesome truck that is secure and can carry 1.5 tons</p>
+      </figcaption>
+    </figure>
       </div>
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://source.unsplash.com/500x400/?truck');">
-          <div class="card-description">
-            <h2><%= truck.name %></h2>
-            <h2><%= truck.price %></h2>
-            <h2><%= truck.description %></h2>
-          </div>
-          <%= link_to "", truck_path(truck), class: 'card-link' %>
-        </div>
-      </div>
+    </div>
     <% end %>
   </div>
-</div>
+</section>
 
 
-<%= link_to "Go to home", root_path, class: 'btn btn-primary' %>
-
-
+<!-- <section id="4col">
+  <div class="container">
+    <h2>Homes around the world</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <figure>
+          <img src="https://a0.muscache.com/im/pictures/54335902/8572cc9d_original.jpg" class="w-100" alt="">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section> -->
 
 

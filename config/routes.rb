@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'bookings/create'
   devise_for :users
+  get 'my_trucks', to: 'trucks#index_trucks'
 
   root to: 'pages#home'
   resources :trucks do

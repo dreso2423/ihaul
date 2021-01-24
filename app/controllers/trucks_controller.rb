@@ -3,6 +3,11 @@ class TrucksController < ApplicationController
     @trucks = Truck.all
   end
 
+  def index_trucks
+    @trucks = Truck.all
+    @truck.owner = current_user
+  end
+
   def show
     @truck = Truck.find(params[:id])
     @booking = Booking.new
