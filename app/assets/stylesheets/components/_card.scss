@@ -37,3 +37,39 @@
   top: -20px;
   width: 40px;
 }
+
+.list-group{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.image-listing{
+  height: 150px;
+  width: 250px;
+  object-fit: cover;
+}
+
+.list-group-item{
+  background-color: none;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -11,7 +11,7 @@ class TrucksController < ApplicationController
   end
 
   def index_trucks
-    @trucks = Truck.where(owner == current_user)
+    @trucks = Truck.where(owner: current_user)
   end
 
   def show
