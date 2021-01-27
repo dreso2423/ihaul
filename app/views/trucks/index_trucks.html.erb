@@ -1,13 +1,16 @@
-<div class="container">
-  <div class="row">
+  <div class="container">
+  <div class="column">
     <div class="col-xs-12 col-sm-10 col-sm-offset-1">
       <h1>Trucks</h1>
       <ul class="list-group">
         <% if not current_user.trucks == nil %>
               <% @trucks.each do |truck| %>
                 <li class="list-group-item">
-                  <%= link_to truck.name, truck_path(truck) %>
-                     <%= link_to "Edit", edit_truck_path(truck)%>
+                  <img src="https://images.pexels.com/photos/5025669/pexels-photo-5025669.jpeg" class="image-listing"alt="">
+                  <div class="d-flex justify-content-between" >
+                    <%= link_to truck.name, truck_path(truck) %>
+                    <%= link_to "Edit", edit_truck_path(truck)%>
+                  </div>
                 </li>
             <% end %>
           <% else %>
@@ -17,10 +20,32 @@
                 </li>
           <% end %>
         <% end %>
-
-
       </ul>
       <%= link_to "Add a new Truck", new_truck_path, class: 'btn btn-primary' %>
     </div>
 
   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
