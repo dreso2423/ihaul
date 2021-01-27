@@ -1,6 +1,13 @@
 class TrucksController < ApplicationController
   def index
     @trucks = Truck.all
+
+    @markers = @trucks.geocoded.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   def index_trucks
