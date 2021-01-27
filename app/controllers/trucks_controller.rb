@@ -1,11 +1,17 @@
 class TrucksController < ApplicationController
   def index
     @trucks = Truck.all
+
+    @markers = @trucks.geocoded.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   def index_trucks
-    @trucks = Truck.all
-    @truck.owner = current_user
+    @trucks = Truck.where(owner == current_user)
   end
 
   def show
