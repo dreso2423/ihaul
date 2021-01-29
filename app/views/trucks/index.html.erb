@@ -8,12 +8,12 @@
       <h2>Please see from our selection of trucks around the world</h2>
       <p>Browse a new selection of trucks verified for quality & speed</p>
     </div>
-    <% @trucks.each do |truck| %>
     <div class="row">
+    <% @trucks.each do |truck| %>
       <div class="col-md-4">
         <figure>
       <img src="https://images.pexels.com/photos/5025669/pexels-photo-5025669.jpeg" class="mb-2"alt="">
-      <figcaption class="inside">
+        <figcaption class="inside">
         <h2 class="text-white"><%= truck.name  %></span></h2>
       </figcaption>
       <figcaption class="outside">
@@ -23,8 +23,9 @@
       </figcaption>
     </figure>
       </div>
-    </div>
     <% end %>
+    </div>
+
   </div>
   <div id="map"
        style="width: 100%; height: 600px;"
