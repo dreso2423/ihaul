@@ -1,6 +1,13 @@
 class TrucksController < ApplicationController
   def index
-    @trucks = Truck.all
+
+    if params[:query].present?
+      @trucks = Truck.search_by_name(params[:query])
+    else
+      @trucks = Truck.all
+    end
+
+    #  agregamos search feature
 
     @markers = @trucks.geocoded.map do |flat|
       {

@@ -5,16 +5,22 @@
   <div class="container justify-content-center">
     <h1>Way better than a rental truck</h1>
     <p>Book unforgettable trucks that get the job done from hosts around the world.</p>
-    <form novalidate="novalidate" class="simple_form search" action="/" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="&#x2713;" />
-      <div class="search-form-control form-group">
-        <input class="form-control string required" type="text" name="search[query]" id="search_query" />
-        <button name="button" type="submit" class="btn btn-flat">
-          <i class="fas fa-search"></i> Search
-        </button>
-      </div>
-    </form>
-  </div>
 </div>
+
+   <%= form_tag trucks_path, method: :get do %>
+    <div class="container">
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "Find a truck"
+      %>
+      <button name="button" type="submit" class="btn btn-primary" >
+        <i class="fas fa-search"></i> Search
+      </button>
+    </div>
+  <% end %>
+</div>
+
 
   <!-- Services -->
   <section class="services">
