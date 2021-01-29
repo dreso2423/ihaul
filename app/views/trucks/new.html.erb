@@ -5,9 +5,9 @@
     <div class="col-lg-6  ">
       <h2>Please put in the information of your vehicle</h2>
       <%= simple_form_for @truck do |f| %>
-        <%= f.input :name %>
+        <%= f.input :name, input_html: { class: "form-input" } , label: "Name" %>
         <%= f.input :description %>
-        <%= f.input :size %>
+        <%= f.input :size, collection: @sizes %>
         <%= f.input :price %>
         <%= f.input :model %>
         <%= f.input :make %>

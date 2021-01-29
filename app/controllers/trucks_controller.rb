@@ -32,6 +32,7 @@ class TrucksController < ApplicationController
 
   def new
     @truck = Truck.new
+    @sizes = [12, 24, 48, 53]
   end
 
   def create
