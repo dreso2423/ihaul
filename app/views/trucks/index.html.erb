@@ -14,11 +14,12 @@
         <figure>
       <img src="https://images.pexels.com/photos/5025669/pexels-photo-5025669.jpeg" class="mb-2"alt="">
         <figcaption class="inside">
-        <h2 class="text-white"><%= truck.name  %></span></h2>
       </figcaption>
       <figcaption class="outside">
-        <p class="small text-color mb-0">150+ VERIFIED TRUCKS in Mexico</p>
-        <p class="text-desc">Awesome truck that is secure and can carry 1.5 tons</p>
+        <h2 class="text-white"><%= link_to truck.name , truck_path(truck)  %></span></h2>
+
+        <p class="small text-color mb-0"> <%= truck.description %> </p>
+        <p class="text-desc"> <%= truck.price %> </p>
 
       </figcaption>
     </figure>

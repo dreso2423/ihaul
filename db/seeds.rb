@@ -28,54 +28,54 @@ end
 puts 'Finished!'
 
 
-#arreglo de imagenes y cuando lo haga en el loop que lo haga en random
+# #arreglo de imagenes y cuando lo haga en el loop que lo haga en random
 
- create_table "trucks", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.string "size"
-    t.integer "price"
-    t.string "make"
-    t.string "model"
-    t.string "color"
-    t.bigint "owner_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.float "latitude"
-    t.float "longitude"
-    t.string "address"
-    t.index ["owner_id"], name: "index_trucks_on_owner_id"
-  end
+#  create_table "trucks", force: :cascade do |t|
+#     t.string "name"
+#     t.string "description"
+#     t.string "size"
+#     t.integer "price"
+#     t.string "make"
+#     t.string "model"
+#     t.string "color"
+#     t.bigint "owner_id"
+#     t.datetime "created_at", precision: 6, null: false
+#     t.datetime "updated_at", precision: 6, null: false
+#     t.float "latitude"
+#     t.float "longitude"
+#     t.string "address"
+#     t.index ["owner_id"], name: "index_trucks_on_owner_id"
+#   end
 
-Faker::Vehicle.vin #=> "LLDWXZLG77VK2LUUF"
+# Faker::Vehicle.vin #=> "LLDWXZLG77VK2LUUF"
 
-# Random vehicle manufacturer
-Faker::Vehicle.manufacture #=> "Lamborghini"
+# # Random vehicle manufacturer
+# Faker::Vehicle.manufacture #=> "Lamborghini"
 
-Faker::Vehicle.make #=> "Honda"
+# Faker::Vehicle.make #=> "Honda"
 
-# Random vehicle model
-# Keyword arguments: make_of_model
-Faker::Vehicle.model #=> "A8"
-Faker::Vehicle.model(make_of_model: 'Toyota') #=> "Prius"
+# # Random vehicle model
+# # Keyword arguments: make_of_model
+# Faker::Vehicle.model #=> "A8"
+# Faker::Vehicle.model(make_of_model: 'Toyota') #=> "Prius"
 
-# Random vehicle make and model
-Faker::Vehicle.make_and_model #=> "Dodge Charger"
+# # Random vehicle make and model
+# Faker::Vehicle.make_and_model #=> "Dodge Charger"
 
-# Random vehicle color
-Faker::Vehicle.color #=> "Red"
+# # Random vehicle color
+# Faker::Vehicle.color #=> "Red"
 
-# Random vehicle transmission
-Faker::Vehicle.transmission #=> "Automanual"
+# # Random vehicle transmission
+# Faker::Vehicle.transmission #=> "Automanual"
 
-# Random vehicle drive type
-Faker::Vehicle.drive_type #=> "4x2/2-wheel drive"
+# # Random vehicle drive type
+# Faker::Vehicle.drive_type #=> "4x2/2-wheel drive"
 
-# Random vehicle fuel type
-Faker::Vehicle.fuel_type #=> "Diesel"
+# # Random vehicle fuel type
+# Faker::Vehicle.fuel_type #=> "Diesel"
 
-# Random vehicle style
-Faker::Vehicle.style #=> "ESi"
+# # Random vehicle style
+# Faker::Vehicle.style #=> "ESi"
 
-# Random car type
-Faker::Vehicle.car_type #=> "Sedan"
+# # Random car type
+# Faker::Vehicle.car_type #=> "Sedan"
