@@ -27,13 +27,22 @@ urls = ["Av. Juárez, Centro Histórico, Mexico City"]
 
 puts 'Creating 100 fake restaurants...'
 10.times do
+  user = User.create(
+    email: Faker::Internet.email,
+    password: Faker::Name.first_name,
+    first_name: Faker::Name.first_name ,
+    last_name: Faker::Name.last_name
+
+  )
+
   truck = Truck.new(
+    owner: user,
     name:    Faker::Vehicle.model,
     address: "#{Faker::Address.street_address}, #{Faker::Address.city} ",
-    color: Faker::Color
-    description: Faker::Vehicle.car_type,
-    image: atruck.sample
-    model:Faker::Vehicle.model
+    color: Faker::Color,
+    description: "#{Faker::Vehicle.car_type}, #{Faker::Vehicle.model}",
+    image: atruck.sample,
+    model:Faker::Vehicle.model,
     make: Faker::Vehicle.make,
     size: Faker::Vehicle.engine_size,
     price: rand(500...10000)

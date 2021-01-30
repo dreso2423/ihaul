@@ -10,16 +10,16 @@
     </div>
     <div class="row">
     <% @trucks.each do |truck| %>
-      <div class="col-md-4">
+      <div class="col-md-4 car-box">
         <figure>
-      <img src="https://images.pexels.com/photos/5025669/pexels-photo-5025669.jpeg" class="mb-2"alt="">
+      <img src="<%= truck.image  %>" class="mb-2"alt="">
         <figcaption class="inside">
       </figcaption>
       <figcaption class="outside">
         <h2 class="text-white"><%= link_to truck.name , truck_path(truck)  %></span></h2>
-
         <p class="small text-color mb-0"> <%= truck.description %> </p>
         <p class="text-desc"> <%= truck.price %> </p>
+        <%= link_to "Book", truck_path(truck), class: 'get-started-header' %>
 
       </figcaption>
     </figure>

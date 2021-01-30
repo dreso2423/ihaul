@@ -5,8 +5,8 @@ class BookingsController < ApplicationController
     @truck = Truck.find(params[:truck_id])
     @booking.truck = @truck
     if @booking.save
-      flash.alert = "Booking done correctly!"
-      redirect_to truck_path(@truck)
+
+      redirect_to trucks_path, notice: "Great we will be in contact shortly"
     else
       flash.alert = "Not available!"
     end
