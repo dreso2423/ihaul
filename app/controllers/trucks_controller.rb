@@ -8,11 +8,11 @@ class TrucksController < ApplicationController
     end
 
     #  agregamos search feature
-
-    @markers = @trucks.geocoded.map do |flat|
+    # raise
+    @markers = @trucks.geocoded.map do |truck|
       {
-        lat: flat.latitude,
-        lng: flat.longitude
+        lat: truck.latitude,
+        lng: truck.longitude
       }
     end
   end
@@ -65,6 +65,6 @@ class TrucksController < ApplicationController
   private
 
   def truck_params
-    params.require(:truck).permit(:name, :description, :size, :price, :make, :model, :color)
+    params.require(:truck).permit(:name, :description, :size, :price, :make, :model, :color, :address)
   end
 end
